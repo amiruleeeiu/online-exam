@@ -2,11 +2,27 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import fakeResult from '../../fakeResult';
 import Sidebar from '../../pages/Sidebar/Sidebar';
+import './StudentResultItemDetail.css'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
 const StudentResultItemDetail = () => {
     const {examId}=useParams();
 
+    let total=0;
+
+    for(let i=0;i<fakeResult.length;i++){
+        total=parseInt(fakeResult[i].gainMarks)+total;
+    }
+    const averageMarks=total/(fakeResult.length+1)
+    console.log(total);
+
     const exastingExamResult=fakeResult.find(res=>res.id===examId);
     const {title,gainMarks}=exastingExamResult;
+
+
+    const handleBackPage=()=>{
+        window.location.pathname="/student/results"
+    }
 
     return (
         <div style={{display:'flex'}}>
@@ -14,9 +30,20 @@ const StudentResultItemDetail = () => {
                 <Sidebar></Sidebar>
             </div>
             <div style={{margin:'30px 20px 20px 30px'}}>
-                <h4>{title}</h4>
-                <div>
-
+                <div style={{display:'flex'}}>
+                    <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>
+                    <h4>{title}</h4>
+                </div>
+               
+                <div style={{display:'flex'}}>
+                    <div className="marks-box d-flex justify-content-between align-items-center">
+                        <h5>Average Marks </h5>
+                        <h1>{averageMarks}</h1>
+                    </div>
+                    <div className="marks-box d-flex justify-content-between align-items-center" style={{marginLeft:'20px'}}>
+                        <h5>You've got </h5>
+                        <h1>{gainMarks}</h1>
+                    </div>
                 </div>
 
             </div>

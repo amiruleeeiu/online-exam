@@ -1,0 +1,38 @@
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import teacherResult from '../../../TeacherData/TeacherFakeResult.js'
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+
+const TeacherResultItem = () => {
+    const{resultId}=useParams();
+    const exastingResult=teacherResult.find(res=>res.id===resultId);
+    const{title,aveMarks,heightMarks,particitants}=exastingResult;
+
+    const handleBackPage=()=>{
+        window.location.pathname="/teacher/results"
+    }
+    return (
+        <div style={{width:'1000px',marginTop:'40px'}}>
+            <div style={{display:'flex'}}>
+                <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>
+                <h3>{title}</h3>
+            </div>
+            <div style={{display:'flex'}}>
+                <div className="box d-flex justify-content-between align-items-center">
+                    <h5>Average Mark</h5>
+                    <h1>{aveMarks}</h1>
+                </div>
+                <div className="box d-flex justify-content-between align-items-center">
+                    <h5>Participants</h5>
+                    <h1>{particitants}</h1>
+                </div>
+                <div className="box d-flex justify-content-between align-items-center">
+                    <h5>Height Marks</h5>
+                    <h1>{heightMarks}</h1>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default TeacherResultItem;

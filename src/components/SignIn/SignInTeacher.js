@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 const SignInStudent = () => {
 
     const handleSubmit=()=>{
-        window.location.pathname='/teacher';
+        window.location.pathname='/teacher/dashboard';
     }
     return (
         <div>

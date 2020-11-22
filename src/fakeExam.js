@@ -4,21 +4,24 @@ const fakeExam=[
         title:'CSE Term Test 1',
         date:'20 Augest 2020',
         time:'11:45AM',
-        status:'Finished'
+        status:'Finished',
+        description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'
     },
     {
         id:'e2',
         title:'CSE Term Test 2',
         date:'22 Augest 2020',
         time:'10:00AM',
-        status:'Finished'
+        status:'Finished',
+        description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'
     },
     {
         id:'e3',
         title:'CSE Term Test 3',
         date:'24 Augest 2020',
         time:'12:45AM',
-        status:'Sheduled'
+        status:'Running',
+        description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book'
     }
 ]
 export default fakeExam;

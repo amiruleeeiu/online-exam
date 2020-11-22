@@ -9,7 +9,7 @@ const StudentResultItem = (props) => {
             <h4>{title}</h4>
             <p>{date}</p>
             <h4>{gainMarks}<span style={{fontSize:'15px'}}>/{totalMarks}</span></h4>
-            <Link to={"/student/results"+id}><button className="main-button">Details</button></Link>
+            <Link to={"/student/results/"+id}><button className="main-button">Details</button></Link>
         </div>
     );
 };

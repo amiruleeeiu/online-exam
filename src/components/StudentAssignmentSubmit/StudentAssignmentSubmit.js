@@ -16,6 +16,10 @@ const StudentAssignmentSubmit = () => {
     const handleSubmit=()=>{
         window.location.pathname='/student/assignments'
     }
+    const handleBackPage=()=>{
+        window.location.pathname='/student/assignments'
+    }
+
 
     return (
         <div style={{display:'flex'}}>
@@ -23,7 +27,11 @@ const StudentAssignmentSubmit = () => {
                 <Sidebar></Sidebar>
             </div>
             <div style={{margin:'30px 10px 30px 30px'}}>
-                <h3><ArrowBackIcon/> {title}</h3>
+                <div style={{display:'flex'}}>
+                    <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>
+                    <h3>{title}</h3>
+                </div>
+                
                 <div style={{marginLeft:'20px',padding:'20px'}}>
                     <h5 style={{color:'blue',marginBottom:'20px'}}>{status} {date}</h5>
                     <p>{description}</p>
