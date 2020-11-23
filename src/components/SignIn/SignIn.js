@@ -8,8 +8,14 @@ const SignIn = () => {
         student:true,
         teacher:false
     });
-    console.log(user);
-
+    if(user.student){
+        localStorage.clear();
+        localStorage.setItem('user','student');
+    }
+    else{
+        localStorage.clear();
+        localStorage.setItem('user','teacher');
+    }
     const handleStudent=()=>{
         const newUser={...user};
         newUser.student=true;
@@ -21,6 +27,7 @@ const SignIn = () => {
         newUser.student=false;
         newUser.teacher=true;
         setUser(newUser);
+        
     }
 
     return (

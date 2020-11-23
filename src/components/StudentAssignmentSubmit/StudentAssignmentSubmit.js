@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './StudentAssignmentSubmit.css'
 import fakeStudentAssignment from '../../fakeStudentAssignment'
-import Sidebar from '../../pages/Sidebar/Sidebar';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const StudentAssignmentSubmit = () => {
@@ -22,11 +21,8 @@ const StudentAssignmentSubmit = () => {
 
 
     return (
-        <div style={{display:'flex'}}>
-            <div>
-                <Sidebar></Sidebar>
-            </div>
-            <div style={{margin:'30px 10px 30px 30px'}}>
+        <div>
+            <div style={{margin:'30px 10px 30px 30px',width:'1000px'}}>
                 <div style={{display:'flex'}}>
                     <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>
                     <h3>{title}</h3>

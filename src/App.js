@@ -7,7 +7,6 @@ import {
 import StudentAssignmentSubmit from './components/StudentAssignmentSubmit/StudentAssignmentSubmit';
 import StudentResultItemDetail from './components/StudentResultItemDetail/StudentResultItemDetail';
 import AllExamItemDetail from './components/Teacher/AllExamItemDetail/AllExamItemDetail';
-import AssignmentSubmissionList from './components/Teacher/AssignmentSubmissionList/AssignmentSubmissionList';
 import TeacherResultItem from './components/Teacher/TeacherResultItem/TeacherResultItem';
 import Auth from './pages/Auth/Auth';
 import StudentAssignment from './pages/Student/StudentAssignment/StudentAssignment';
@@ -21,8 +20,8 @@ import StudentFeedbacks from './pages/Teacher/StudentFeedbacks/StudentFeedbacks'
 import TeacherAssignments from './pages/Teacher/TeacherAssignments/TeacherAssignments';
 import TeacherDashboard from './pages/Teacher/TeacherDashboard/TeacherDashboard';
 import TeacherResult from './pages/Teacher/TeacherResult/TeacherResult';
-import TeacherSidebar from './pages/Teacher/TeacherSidebar/TeacherSidebar'
 import "react-datepicker/dist/react-datepicker.css";
+import Sidebar from './pages/Sidebar/Sidebar';
 
 const App = () => {
   return (
@@ -31,26 +30,26 @@ const App = () => {
         <Route path="/" exact>
           <Auth></Auth>
         </Route>
-        <Route path="/student/dashboard">
-          <StudentDashboard></StudentDashboard>
-        </Route>
-        <Route path="/student/myexams">
-          <StudentMyExam></StudentMyExam>
-        </Route>
-        <Route path="/student/results" exact>
-          <StudentResult></StudentResult>
-        </Route>
-        <Route path="/student/results/:examId">
-          <StudentResultItemDetail></StudentResultItemDetail>
-        </Route>
-        <Route path="/student/assignments" exact>
-          <StudentAssignment></StudentAssignment>
-        </Route>
-        <Route path="/student/assignments/:assignmentId"> 
-          <StudentAssignmentSubmit></StudentAssignmentSubmit>
-        </Route>
         <div style={{display:'flex'}}>
-          <TeacherSidebar></TeacherSidebar>
+          <Sidebar></Sidebar>
+          <Route path="/student/dashboard">
+            <StudentDashboard></StudentDashboard>
+          </Route>
+          <Route path="/student/myexams">
+            <StudentMyExam></StudentMyExam>
+          </Route>
+          <Route path="/student/results" exact>
+            <StudentResult></StudentResult>
+          </Route>
+          <Route path="/student/results/:examId">
+            <StudentResultItemDetail></StudentResultItemDetail>
+          </Route>
+          <Route path="/student/assignments" exact>
+            <StudentAssignment></StudentAssignment>
+          </Route>
+          <Route path="/student/assignments/:assignmentId"> 
+            <StudentAssignmentSubmit></StudentAssignmentSubmit>
+          </Route>
           <Route path="/teacher/dashboard">
             <TeacherDashboard></TeacherDashboard>
           </Route>

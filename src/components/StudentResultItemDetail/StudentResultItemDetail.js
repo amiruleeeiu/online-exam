@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import fakeResult from '../../fakeResult';
-import Sidebar from '../../pages/Sidebar/Sidebar';
 import './StudentResultItemDetail.css'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
@@ -25,10 +24,7 @@ const StudentResultItemDetail = () => {
     }
 
     return (
-        <div style={{display:'flex'}}>
-            <div>
-                <Sidebar></Sidebar>
-            </div>
+        <div>
             <div style={{margin:'30px 20px 20px 30px'}}>
                 <div style={{display:'flex'}}>
                     <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>

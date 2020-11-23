@@ -13,6 +13,7 @@ const StudentSidebar = () => {
         result:false,
         assignment:false
     })
+    console.log(activePage);
 
     const[pages,setPase]=useState({
         dashboard:'dashboard',
@@ -24,6 +25,7 @@ const StudentSidebar = () => {
     const dashboard='dashboard';
     const{active}=useParams();
     console.log(useParams());
+
     const handleDashbord=()=>{
         const newActive={...activePage};
         newActive.dashboard=true;
@@ -60,10 +62,10 @@ const StudentSidebar = () => {
     return (
         <div className="sidebar-list">
             <ul>
-                <li className={activePage.dashboard && 'activePage'}><Link to={"/student/"+pages.dashboard} onClick={handleDashbord}><DashboardRoundedIcon/> Dashboard</Link></li>
-                <li className={activePage.myExam && 'activePage'}><Link to={"/student/"+pages.myExam} onClick={handleMyExam}><ClassIcon/> My Exams</Link></li>
-                <li className={activePage.result && 'activePage'}><Link to={"/student/"+pages.result} onClick={handleResult}><PollIcon/> Results</Link></li>
-                <li className={activePage.assignment && 'activePage'}><Link to={"/student/"+pages.assignment} onClick={handleAssigntment}><AssignmentTurnedInIcon/> Assignments</Link></li>
+                <li className={activePage.dashboard && 'activePage'}><Link to={"/student/"+pages.dashboard} onClick={handleDashbord}><DashboardRoundedIcon style={{ fontSize: 30}}/> Dashboard</Link></li>
+                <li className={activePage.myExam && 'activePage'}><Link to={"/student/"+pages.myExam} onClick={handleMyExam}><ClassIcon style={{ fontSize: 30}}/> My Exams</Link></li>
+                <li className={activePage.result && 'activePage'}><Link to={"/student/"+pages.result} onClick={handleResult}><PollIcon style={{ fontSize: 30}}/> Results</Link></li>
+                <li className={activePage.assignment && 'activePage'}><Link to={"/student/"+pages.assignment} onClick={handleAssigntment}><AssignmentTurnedInIcon style={{ fontSize: 30}}/> Assignments</Link></li>
             </ul>
         </div>
     );
