@@ -1,0 +1,6 @@
+.question{
+    box-shadow: 1px 1px 10px rgb(231, 230, 230);
+    padding: 40px;
+    width: 900px;
+    border-radius: 10px;
+}

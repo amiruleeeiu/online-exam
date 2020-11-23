@@ -18,7 +18,7 @@ const TeacherSidebarList = () => {
                <li className={activePage==='allexam' && 'activePage'}><Link to="/teacher/allexam" onclick={()=>setActivePage('allexam')}><ClassIcon/> All Exams</Link></li>
                <li className={activePage==='results' && 'activePage'}><Link to="/teacher/results" onclick={()=>setActivePage('results')}><PollIcon/> Results</Link></li>
                <li className={activePage==='assignments' && 'activePage'}><Link to="/teacher/assignments" onclick={()=>setActivePage('assignments')}><AssignmentTurnedInIcon/> Assignments</Link></li>
-               <li className={activePage==='studentfeedbacks' && 'activePage'}><Link to="teacher/studentfeedbacks" onclick={()=>setActivePage('studentfeedbacks')}><CommentIcon/> Student Feedbacks</Link></li>
+               <li className={activePage==='studentfeedbacks' && 'activePage'}><Link to="/teacher/studentfeedbacks" onclick={()=>setActivePage('studentfeedbacks')}><CommentIcon/> Student Feedbacks</Link></li>
             </ul>
         </div>
     );

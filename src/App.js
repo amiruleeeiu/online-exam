@@ -16,10 +16,13 @@ import StudentMyExam from './pages/Student/StudentMyExam/StudentMyExam';
 import StudentResult from './pages/Student/StudentResult/StudentResult';
 import AllExam from './pages/Teacher/AllExam/AllExam';
 import AssignmentSubmission from './pages/Teacher/AssignmentSubmission/AssignmentSubmission';
+import CreateExam from './pages/Teacher/CreateExam/CreateExam';
+import StudentFeedbacks from './pages/Teacher/StudentFeedbacks/StudentFeedbacks';
 import TeacherAssignments from './pages/Teacher/TeacherAssignments/TeacherAssignments';
 import TeacherDashboard from './pages/Teacher/TeacherDashboard/TeacherDashboard';
 import TeacherResult from './pages/Teacher/TeacherResult/TeacherResult';
 import TeacherSidebar from './pages/Teacher/TeacherSidebar/TeacherSidebar'
+import "react-datepicker/dist/react-datepicker.css";
 
 const App = () => {
   return (
@@ -68,6 +71,12 @@ const App = () => {
           </Route>
           <Route path="/teacher/assignments/:assignmentId">
             <AssignmentSubmission></AssignmentSubmission>
+          </Route>
+          <Route path="/teacher/studentfeedbacks">
+            <StudentFeedbacks></StudentFeedbacks>
+          </Route>
+          <Route path="/teacher/createexam" exact>
+            <CreateExam></CreateExam>
           </Route>
         </div>
       </Switch>

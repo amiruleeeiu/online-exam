@@ -7,7 +7,7 @@ const Auth = () => {
         <div className="home">
             <div className="app-title">
                 <h4>Welcome To</h4>
-                <h1>Online Examination System</h1>
+                <h1>SUST Online Examination System</h1>
             </div>
             <div className="auth">
                 <SignIn></SignIn>

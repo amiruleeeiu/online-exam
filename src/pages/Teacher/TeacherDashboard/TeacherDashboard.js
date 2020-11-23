@@ -20,10 +20,12 @@ const TeacherDashboard = () => {
                 </div>
                 <h4>At a glance</h4>
                 <div className="dashboard-box" style={{display:'flex'}}>
-                    <div className="box d-flex justify-content-between align-items-center">
-                        <h5>Create a new exam</h5>
-                        <CreateNewFolderIcon style={{ fontSize: 50}}/>
-                    </div>
+                    <Link to="/teacher/createexam">
+                        <div className="box d-flex justify-content-between align-items-center">
+                            <h5>Create a new exam</h5>
+                            <CreateNewFolderIcon style={{ fontSize: 50}}/>
+                        </div>
+                    </Link>
                     <Link to="/teacher/allexam">
                         <div className="box d-flex justify-content-between align-items-center">
                             <h5>Exam Takes</h5>

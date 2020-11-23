@@ -37,7 +37,10 @@ const StudentAssignmentSubmit = () => {
                     <p>{description}</p>
                     <label style={{color:'blue'}}> Attach Your Work</label>
                     <br/>
-                    <input type="file"/>
+                    <div className="assisgnment-attach">
+                        <input type="file" />
+                    </div>
+                    <br/>
                     <button className="main-button" onClick={handleSubmit}>Submit</button>
                 </div>
             </div>
