@@ -4,6 +4,7 @@ import './TeacherDashboard.css'
 import fakeExam from '../../../fakeExam';
 import UpcommingExam from '../../../components/UpcommingExamItem/UpcommingExamItem';
 import CreateNewFolderIcon from '@material-ui/icons/CreateNewFolder';
+import {Link} from 'react-router-dom'
 
 const TeacherDashboard = () => {
     return (
@@ -18,19 +19,23 @@ const TeacherDashboard = () => {
                     </div>
                 </div>
                 <h4>At a glance</h4>
-                <div style={{display:'flex'}}>
+                <div className="dashboard-box" style={{display:'flex'}}>
                     <div className="box d-flex justify-content-between align-items-center">
                         <h5>Create a new exam</h5>
                         <CreateNewFolderIcon style={{ fontSize: 50}}/>
                     </div>
-                    <div className="box d-flex justify-content-between align-items-center">
-                        <h5>Exam Takes</h5>
-                        <h1>11</h1>
-                    </div>
-                    <div className="box d-flex justify-content-between align-items-center">
-                        <h5>Assignments</h5>
-                        <h1>23</h1>
-                    </div>
+                    <Link to="/teacher/allexam">
+                        <div className="box d-flex justify-content-between align-items-center">
+                            <h5>Exam Takes</h5>
+                            <h1>11</h1>
+                        </div>
+                    </Link>
+                    <Link to="/teacher/assignments">
+                        <div className="box d-flex justify-content-between align-items-center">
+                            <h5>Assignments</h5>
+                            <h1>23</h1>
+                        </div>
+                    </Link>
                 </div>
                 <div>
                     <h4>Next Exam</h4>

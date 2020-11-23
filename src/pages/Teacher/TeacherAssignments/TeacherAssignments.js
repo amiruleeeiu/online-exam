@@ -1,0 +1,39 @@
+import React, { useState } from 'react';
+import './TeacherAssignments.css'
+import teacherFakeAssignments from '../../../TeacherData/teacherAssignments';
+import TeacherAssignmentsList from '../../../components/Teacher/TeacherAssignmentsList/TeacherAssignmentsList';
+import {Link} from 'react-router-dom';
+
+const TeacherAssignments = () => {
+    const[assignmentType,setAssignmentsType]=useState('due');
+
+    const handleDue=()=>{
+        setAssignmentsType('due')
+    }
+    const handleComplete=()=>{
+        setAssignmentsType('finished')
+    }
+
+    const exastingAssignments=teacherFakeAssignments.filter(assignment=>assignment.status===assignmentType);
+
+
+    return (
+        <div style={{width:'1000px',marginTop:'40px'}}>
+            <div className="assignment-create-button">
+                <h1>Assignments</h1>
+                <button className="main-button">Create a new one</button>
+            </div>
+            <div style={{marginTop:'20px'}} className="teacher-assignment">
+                <div style={{display:'flex'}}>
+                    <Link onClick={handleDue} className={assignmentType==='due' && 'active-assignment'}>Due Assignments</Link>
+                    <Link onClick={handleComplete} className={assignmentType==='finished' && 'active-assignment'}>Completed Assignments</Link>
+                </div>
+                {
+                    exastingAssignments.map(assignment=><TeacherAssignmentsList key={assignment.id} assignment={assignment}></TeacherAssignmentsList>)
+                }
+            </div>
+        </div>
+    );
+};
+
+export default TeacherAssignments;

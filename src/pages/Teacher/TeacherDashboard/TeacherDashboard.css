@@ -10,3 +10,10 @@
     color: indigo;
     font-size: 60px;
 }
+.dashboard-box a:hover{
+    text-decoration: none;
+    color: black;
+}
+.dashboard-box a{
+    color: black;
+}
