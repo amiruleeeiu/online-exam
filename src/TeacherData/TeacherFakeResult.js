@@ -6,7 +6,27 @@ const TeacherFakeResult=[
         time:'12:00PM',
         aveMarks:'30',
         heightMarks:'50',
-        particitants:22
+        particitants:22,
+        questions:[
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'3.5',
+                rightAns:'30',
+                wrongAns:'20'
+            },
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'5',
+                rightAns:'20',
+                wrongAns:'30'
+            },
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'5',
+                rightAns:'50',
+                wrongAns:'30'
+            }
+        ]
     },
     {
         id:'r2',
@@ -15,7 +35,27 @@ const TeacherFakeResult=[
         time:'11:00PM',
         aveMarks:'40',
         heightMarks:'50',
-        particitants:32
+        particitants:32,
+        questions:[
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'3.5',
+                rightAns:'30',
+                wrongAns:'20'
+            },
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'5',
+                rightAns:'20',
+                wrongAns:'30'
+            },
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'5',
+                rightAns:'50',
+                wrongAns:'30'
+            }
+        ]
     },
     {
         id:'r3',
@@ -24,7 +64,27 @@ const TeacherFakeResult=[
         time:'10:00PM',
         aveMarks:'25',
         heightMarks:'30',
-        particitants:25
+        particitants:25,
+        questions:[
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'3.5',
+                rightAns:'30',
+                wrongAns:'20'
+            },
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'5',
+                rightAns:'20',
+                wrongAns:'30'
+            },
+            {
+                name:'What is the right way to decler variable ?',
+                avgTime:'5',
+                rightAns:'50',
+                wrongAns:'30'
+            }
+        ]
     }
 ]
 export default TeacherFakeResult;

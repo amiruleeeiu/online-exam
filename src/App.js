@@ -22,6 +22,8 @@ import TeacherDashboard from './pages/Teacher/TeacherDashboard/TeacherDashboard'
 import TeacherResult from './pages/Teacher/TeacherResult/TeacherResult';
 import "react-datepicker/dist/react-datepicker.css";
 import Sidebar from './pages/Sidebar/Sidebar';
+import CreateAssignment from './pages/Teacher/CreateAssignment/CreateAssignment';
+import User from './components/User/User';
 
 const App = () => {
   return (
@@ -31,52 +33,62 @@ const App = () => {
           <Auth></Auth>
         </Route>
         <div style={{display:'flex'}}>
-          <Sidebar></Sidebar>
-          <Route path="/student/dashboard">
-            <StudentDashboard></StudentDashboard>
-          </Route>
-          <Route path="/student/myexams">
-            <StudentMyExam></StudentMyExam>
-          </Route>
-          <Route path="/student/results" exact>
-            <StudentResult></StudentResult>
-          </Route>
-          <Route path="/student/results/:examId">
-            <StudentResultItemDetail></StudentResultItemDetail>
-          </Route>
-          <Route path="/student/assignments" exact>
-            <StudentAssignment></StudentAssignment>
-          </Route>
-          <Route path="/student/assignments/:assignmentId"> 
-            <StudentAssignmentSubmit></StudentAssignmentSubmit>
-          </Route>
-          <Route path="/teacher/dashboard">
-            <TeacherDashboard></TeacherDashboard>
-          </Route>
-          <Route path="/teacher/allexam" exact>
-            <AllExam></AllExam>
-          </Route>
-          <Route path="/teacher/allexam/:examId">
-            <AllExamItemDetail></AllExamItemDetail>
-          </Route>
-          <Route path="/teacher/results" exact>
-            <TeacherResult></TeacherResult>
-          </Route>
-          <Route path="/teacher/results/:resultId">
-            <TeacherResultItem></TeacherResultItem>
-          </Route>
-          <Route path="/teacher/assignments" exact>
-            <TeacherAssignments></TeacherAssignments>
-          </Route>
-          <Route path="/teacher/assignments/:assignmentId">
-            <AssignmentSubmission></AssignmentSubmission>
-          </Route>
-          <Route path="/teacher/studentfeedbacks">
-            <StudentFeedbacks></StudentFeedbacks>
-          </Route>
-          <Route path="/teacher/createexam" exact>
-            <CreateExam></CreateExam>
-          </Route>
+          <div>
+            <Sidebar></Sidebar>
+          </div>
+          <div>
+            <User></User>
+            <br/>
+            <br/>
+            <Route path="/student/dashboard">
+              <StudentDashboard></StudentDashboard>
+            </Route>
+            <Route path="/student/myexams">
+              <StudentMyExam></StudentMyExam>
+            </Route>
+            <Route path="/student/results" exact>
+              <StudentResult></StudentResult>
+            </Route>
+            <Route path="/student/results/:examId">
+              <StudentResultItemDetail></StudentResultItemDetail>
+            </Route>
+            <Route path="/student/assignments" exact>
+              <StudentAssignment></StudentAssignment>
+            </Route>
+            <Route path="/student/assignments/:assignmentId"> 
+              <StudentAssignmentSubmit></StudentAssignmentSubmit>
+            </Route>
+            <Route path="/teacher/dashboard">
+              <TeacherDashboard></TeacherDashboard>
+            </Route>
+            <Route path="/teacher/allexam" exact>
+              <AllExam></AllExam>
+            </Route>
+            <Route path="/teacher/allexam/:examId">
+              <AllExamItemDetail></AllExamItemDetail>
+            </Route>
+            <Route path="/teacher/results" exact>
+              <TeacherResult></TeacherResult>
+            </Route>
+            <Route path="/teacher/results/:resultId">
+              <TeacherResultItem></TeacherResultItem>
+            </Route>
+            <Route path="/teacher/assignments" exact>
+              <TeacherAssignments></TeacherAssignments>
+            </Route>
+            <Route path="/teacher/assignments/:assignmentId">
+              <AssignmentSubmission></AssignmentSubmission>
+            </Route>
+            <Route path="/teacher/studentfeedbacks">
+              <StudentFeedbacks></StudentFeedbacks>
+            </Route>
+            <Route path="/teacher/createexam" exact>
+              <CreateExam></CreateExam>
+            </Route>
+            <Route path="/teacher/createassignment">
+              <CreateAssignment></CreateAssignment>
+            </Route>
+          </div>
         </div>
       </Switch>
     </Router>

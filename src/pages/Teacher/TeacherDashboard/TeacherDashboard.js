@@ -7,15 +7,19 @@ import CreateNewFolderIcon from '@material-ui/icons/CreateNewFolder';
 import {Link} from 'react-router-dom'
 
 const TeacherDashboard = () => {
+
+    const runningExam=fakeExam.find(exam=>exam.status==='Running');
+
+    console.log(runningExam);
     return (
         <div style={{width:'1000px',marginTop:'40px'}}>
                 <div className="dashboard-next-exam d-flex justify-content-between">
                     <div>
-                        <h6>Running Now</h6>
-                        <h3>CSE133Term Test1</h3>
+                        <h6>{runningExam.status} Now</h6>
+                        <h3>{runningExam.title}</h3>
                     </div>
                     <div>
-                        <button className="main-button">See More <ArrowForwardIcon/></button>
+                        <Link to={"/teacher/allexam/"+runningExam.id}><button className="main-button">See More <ArrowForwardIcon/></button></Link>
                     </div>
                 </div>
                 <h4>At a glance</h4>

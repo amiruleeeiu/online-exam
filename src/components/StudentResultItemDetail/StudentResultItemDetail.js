@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import fakeResult from '../../fakeResult';
 import './StudentResultItemDetail.css'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import StudentResultQuestion from './StudentResultQuestion';
 
 const StudentResultItemDetail = () => {
     const {examId}=useParams();
@@ -16,7 +17,7 @@ const StudentResultItemDetail = () => {
     console.log(total);
 
     const exastingExamResult=fakeResult.find(res=>res.id===examId);
-    const {title,gainMarks}=exastingExamResult;
+    const {title,gainMarks,questions}=exastingExamResult;
 
     return (
         <div>
@@ -36,7 +37,12 @@ const StudentResultItemDetail = () => {
                         <h1>{gainMarks}</h1>
                     </div>
                 </div>
-
+                <div style={{marginLeft:'30px'}}>
+                    <h3>Question -wise Stat</h3>
+                    {
+                        questions.map((item,index)=><StudentResultQuestion question={item} index={index}></StudentResultQuestion>)
+                    }
+                </div>
             </div>
         </div>
     );

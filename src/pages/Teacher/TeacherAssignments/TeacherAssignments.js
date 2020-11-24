@@ -21,7 +21,7 @@ const TeacherAssignments = () => {
         <div style={{width:'1000px',marginTop:'40px'}}>
             <div className="assignment-create-button">
                 <h1>Assignments</h1>
-                <button className="main-button">Create a new one</button>
+                <Link to="/teacher/createassignment"><button className="main-button">Create a new one</button></Link>
             </div>
             <div style={{marginTop:'20px'}} className="selection-button">
                 <div style={{display:'flex'}}>
