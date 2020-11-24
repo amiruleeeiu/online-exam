@@ -39,7 +39,23 @@ const fakeExam=[
                 131402,
                 131403
             ]
-        }
+        },
+        questions:[
+            {
+                title:'What is the right way to declare variable ?',
+                option:['int a','int 56a','int $56a','int _a']
+            },
+            {
+                title:'What is the range of nteger ?',
+
+            },
+            {
+                title:'Write a C program to find the nth prime number ?'
+            },
+            {
+                title:'Write the steps of DFS'
+            }
+        ]
     }
 ]
 export default fakeExam;

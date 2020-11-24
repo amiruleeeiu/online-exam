@@ -24,6 +24,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Sidebar from './pages/Sidebar/Sidebar';
 import CreateAssignment from './pages/Teacher/CreateAssignment/CreateAssignment';
 import User from './components/User/User';
+import RunningExam from './pages/Student/RunningExam/RunningExam';
 
 const App = () => {
   return (
@@ -31,6 +32,9 @@ const App = () => {
       <Switch>
         <Route path="/" exact>
           <Auth></Auth>
+        </Route>
+        <Route path="/student/runningexam">
+          <RunningExam></RunningExam>
         </Route>
         <div style={{display:'flex'}}>
           <div>
@@ -88,8 +92,10 @@ const App = () => {
             <Route path="/teacher/createassignment">
               <CreateAssignment></CreateAssignment>
             </Route>
+            
           </div>
         </div>
+          
       </Switch>
     </Router>
   );

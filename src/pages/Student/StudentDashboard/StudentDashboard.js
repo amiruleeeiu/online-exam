@@ -3,6 +3,7 @@ import './StudentDashboard.css'
 import fakeExam from '../../../fakeExam';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import UpcommingExamItem from '../../../components/UpcommingExamItem/UpcommingExamItem'
+import { Link } from 'react-router-dom';
 const StudentDashboard = () => {
 
     return (
@@ -14,7 +15,7 @@ const StudentDashboard = () => {
                         <h3>CSE133Term Test1</h3>
                     </div>
                     <div>
-                        <button className="main-button">Enter Now <ArrowForwardIcon/></button>
+                        <Link to="/student/runningexam"><button className="main-button">Enter Now <ArrowForwardIcon/></button></Link>
                     </div>
                 </div>
                 <div className="dashboard-upcomming-exam">

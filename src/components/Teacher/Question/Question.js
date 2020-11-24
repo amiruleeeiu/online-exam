@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Question.css'
 
 
@@ -9,8 +10,9 @@ const Question = () => {
                 <input type="text" className="form-control" placeholder="Question"/>
             </div>
             <div>
-                <label>MAQ</label><label>Written</label>
+                <Link>MCQ</Link><Link style={{marginLeft:'20px'}}>Written</Link>
             </div>
+            <br/>
             <div className="form-inline">
                 <input type="text" className="form-control" placeholder="Option A"/>
                 <input type="text" className="form-control" placeholder="Option B"/>
