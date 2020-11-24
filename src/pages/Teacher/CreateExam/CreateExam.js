@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from "react-datepicker";
 import AddQuestion from '../AddQuestion/AddQuestion';
 import './CreateExam.css'
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 const CreateExam = () => {
 
@@ -70,7 +71,7 @@ const CreateExam = () => {
                         <input type="password" className="form-control" placeholder="Password"/>
                     </div>
                 </form>
-                <button className="main-button" style={{width:'120px',height:'50px'}} onClick={handleHide}>Next</button>
+                <button className="main-button" style={{width:'120px',height:'50px'}} onClick={handleHide}>Next <ArrowForwardIcon/></button>
             </div>
             <div className={!hide && 'hide'}>
                 <AddQuestion></AddQuestion>

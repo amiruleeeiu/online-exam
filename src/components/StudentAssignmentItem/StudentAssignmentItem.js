@@ -5,7 +5,7 @@ const StudentAssignmentItem = (props) => {
     const{title,date,status,id}=props.assignment;
 
     return (
-        <div className="exam-item d-flex justify-content-between">
+        <div className="assignments-item d-flex justify-content-between">
             <h4>{title}</h4>
             <p>{date}</p>
             <Link to={"/student/assignments/"+id}><button className="main-button">Submit</button></Link>

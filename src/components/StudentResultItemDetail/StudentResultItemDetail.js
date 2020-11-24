@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import fakeResult from '../../fakeResult';
 import './StudentResultItemDetail.css'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -18,16 +18,11 @@ const StudentResultItemDetail = () => {
     const exastingExamResult=fakeResult.find(res=>res.id===examId);
     const {title,gainMarks}=exastingExamResult;
 
-
-    const handleBackPage=()=>{
-        window.location.pathname="/student/results"
-    }
-
     return (
         <div>
             <div style={{margin:'30px 20px 20px 30px'}}>
                 <div style={{display:'flex'}}>
-                    <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>
+                <Link to="/student/results"><label><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label></Link>
                     <h4>{title}</h4>
                 </div>
                

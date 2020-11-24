@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import teacherResult from '../../../TeacherData/TeacherFakeResult.js'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
@@ -8,13 +8,10 @@ const TeacherResultItem = () => {
     const exastingResult=teacherResult.find(res=>res.id===resultId);
     const{title,aveMarks,heightMarks,particitants}=exastingResult;
 
-    const handleBackPage=()=>{
-        window.location.pathname="/teacher/results"
-    }
     return (
         <div style={{width:'1000px',marginTop:'40px'}}>
             <div style={{display:'flex'}}>
-                <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>
+            <Link to="/teacher/results"><label><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label></Link>
                 <h3>{title}</h3>
             </div>
             <div style={{display:'flex'}}>

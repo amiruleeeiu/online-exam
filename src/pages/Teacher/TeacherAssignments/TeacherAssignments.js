@@ -23,10 +23,10 @@ const TeacherAssignments = () => {
                 <h1>Assignments</h1>
                 <button className="main-button">Create a new one</button>
             </div>
-            <div style={{marginTop:'20px'}} className="teacher-assignment">
+            <div style={{marginTop:'20px'}} className="selection-button">
                 <div style={{display:'flex'}}>
-                    <Link onClick={handleDue} className={assignmentType==='due' && 'active-assignment'}>Due Assignments</Link>
-                    <Link onClick={handleComplete} className={assignmentType==='finished' && 'active-assignment'}>Completed Assignments</Link>
+                    <Link onClick={handleDue} className={assignmentType==='due' && 'active-item'}>Due Assignments</Link>
+                    <Link onClick={handleComplete} className={assignmentType==='finished' && 'active-item'}>Completed Assignments</Link>
                 </div>
                 {
                     exastingAssignments.map(assignment=><TeacherAssignmentsList key={assignment.id} assignment={assignment}></TeacherAssignmentsList>)

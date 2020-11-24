@@ -1,7 +1,7 @@
 import React from 'react';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import teacherFakeAssignment from '../../../TeacherData/teacherAssignments';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import AssignmentSubmissionList from '../../../components/Teacher/AssignmentSubmissionList/AssignmentSubmissionList';
 
 const AssignmentSubmission = () => {
@@ -12,14 +12,10 @@ const AssignmentSubmission = () => {
      console.log(exastingAssignment);
      const{title,date,submission}=exastingAssignment;
 
-    const handleBackPage=()=>{
-        window.location.pathname="/teacher/assignments"
-    }
-
     return (
         <div style={{width:'1000px',marginTop:'50px'}}>
             <div style={{display:'flex'}}>
-                <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>
+            <Link to="/teacher/assignments"><label><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label></Link>
                 <h3>{title}</h3>
             </div>
             <div>

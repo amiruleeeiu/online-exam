@@ -1,6 +1,7 @@
 import React from 'react';
 import './Question.css'
 
+
 const Question = () => {
     return (
         <div className="question">
@@ -15,6 +16,11 @@ const Question = () => {
                 <input type="text" className="form-control" placeholder="Option B"/>
                 <input type="text" className="form-control" placeholder="Option C"/>
                 <input type="text" className="form-control" placeholder="Option D"/>
+            </div>
+            <br/>
+            <div className="marks-input form-inline">
+                <h3>Marks</h3>
+                <input type="number" name="marks" defaultValue="5"/>
             </div>
         </div>
     );

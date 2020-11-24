@@ -1,10 +1,10 @@
-.teacher-assignments-list{
+.assignments-item{
     padding: 20px;
     box-shadow: 1px 1px 10px rgb(199, 196, 196);
     border-radius: 10px;
     margin: 10px 0px;
 }
-.teacher-assignments-list button{
+.assignments-item button{
     border-radius: 6px;
     font-size: 15px;
 }

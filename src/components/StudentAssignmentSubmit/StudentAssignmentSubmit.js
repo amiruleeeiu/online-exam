@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './StudentAssignmentSubmit.css'
 import fakeStudentAssignment from '../../fakeStudentAssignment'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
@@ -13,18 +13,14 @@ const StudentAssignmentSubmit = () => {
     const{title,status,date,description}=exastingAssignment;
 
     const handleSubmit=()=>{
-        window.location.pathname='/student/assignments'
+       console.log("submit");
     }
-    const handleBackPage=()=>{
-        window.location.pathname='/student/assignments'
-    }
-
 
     return (
         <div>
             <div style={{margin:'30px 10px 30px 30px',width:'1000px'}}>
                 <div style={{display:'flex'}}>
-                    <label onClick={handleBackPage}><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label>
+                <Link to="/student/assignments"><label><ArrowBackIcon style={{ fontSize: 30,marginRight:'10px',cursor:'pointer' }}/></label></Link>
                     <h3>{title}</h3>
                 </div>
                 
@@ -37,7 +33,7 @@ const StudentAssignmentSubmit = () => {
                         <input type="file" />
                     </div>
                     <br/>
-                    <button className="main-button" onClick={handleSubmit}>Submit</button>
+                    <Link to="/student/assignments"><button className="main-button" onClick={handleSubmit}>Submit</button></Link>
                 </div>
             </div>
             

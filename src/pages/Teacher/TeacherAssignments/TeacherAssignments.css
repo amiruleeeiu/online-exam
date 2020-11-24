@@ -14,15 +14,15 @@
     font-weight: 400;
     background-color: rgb(35, 77, 90);
 }
-.teacher-assignment a{
+.selection-button a{
     margin: 20px;
     font-size: 20px;
 }
-.teacher-assignment a:hover{
+.selection-button a:hover{
     text-decoration: none;
 }
 
-.active-assignment{
+.active-item{
     color: #3D81BF;
     border-bottom: 3px solid#3D81BF;
 }

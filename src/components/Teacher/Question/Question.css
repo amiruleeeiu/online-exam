@@ -4,3 +4,35 @@
     width: 900px;
     border-radius: 10px;
 }
+.marks-input input[type=number]::-webkit-inner-spin-button, 
+.marks-input input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+.marks-input{
+    background-color: #6D3389;
+    width: 200px;
+    height: 50px;
+    color: white;
+    padding: 5px;
+    padding-left: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.marks-input input{
+    width: 50px;
+    height: 40px;
+    font-size: 30px;
+    background-color: #6D3389;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 20px;
+}
+.marks-input input:focus{
+    border: none;
+    outline: none;
+}

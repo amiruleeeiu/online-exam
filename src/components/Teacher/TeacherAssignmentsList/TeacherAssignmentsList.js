@@ -8,7 +8,7 @@ const TeacherAssignmentsList = (props) => {
     const{title,date,status,id}=props.assignment;
     
     return (
-        <div className="teacher-assignments-list d-flex justify-content-between align-items-center">
+        <div className="assignments-item d-flex justify-content-between align-items-center">
             <h5>{title}</h5>
             <div>
                 <p>{status}:{date}</p>
