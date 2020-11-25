@@ -30,8 +30,8 @@ const AllExamItemDetail = () => {
                 <br/>
                 <p>{description}</p>
                 <br/>
-                <button className="main-button">Copy Link</button>
-                <button className="main-button" style={{marginLeft:'20px',marginBottom:'20px'}}>Edit</button>
+                <button className="main-button" style={{width:'137px',height:'45px',borderRadius:'10px'}}>Copy Link</button>
+                <button className="main-button" style={{marginLeft:'20px',marginBottom:'20px',width:'137px',height:'45px',borderRadius:'10px'}}>Edit</button>
             </div>
             <div style={{marginLeft:'20px'}} className="selection-button">
                     <Link onClick={handleParticipant} className={selcectionItems==='participant' && 'active-item'}>Participants</Link>
