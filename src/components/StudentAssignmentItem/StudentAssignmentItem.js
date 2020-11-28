@@ -1,15 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './StudentAssignmentItem.css'
 
 const StudentAssignmentItem = (props) => {
     const{title,date,status,id}=props.assignment;
 
     return (
-        <div className="assignments-item d-flex justify-content-between">
-            <h4>{title}</h4>
-            <p>{date}</p>
-            <Link to={"/student/assignments/"+id}><button className="main-button">Submit</button></Link>
+        <div className="assignments-item d-flex justify-content-between align-items-center">
+        <div>
+            <h5>{title}</h5>
         </div>
+        <div style={{display:'flex'}}>
+            <p style={{marginRight:'20px'}}>{status}:{date}</p>
+            <div>
+            <Link to={"/student/assignments/"+id}><button className="main-button" style={{backgroundColor:'#0DAA71'}}>Submit</button></Link>
+            </div>
+        </div>
+    </div>
     );
 };
 

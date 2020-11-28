@@ -9,13 +9,15 @@ const TeacherAssignmentsList = (props) => {
     
     return (
         <div className="assignments-item d-flex justify-content-between align-items-center">
-            <h5>{title}</h5>
             <div>
-                <p>{status}:{date}</p>
+                <h5>{title}</h5>
             </div>
-            <div>
+            <div style={{display:'flex'}}>
+                <p style={{marginRight:'20px'}}>{status}:{date}</p>
+                <div>
                 <Link to={"/teacher/assignments/"+id}><button className="main-button" style={{backgroundColor:'#0DAA71'}}>Submissions</button></Link>
-                <button className="main-button" style={{backgroundColor:'#36B3CE',marginLeft:'20px'}}>Edit</button>
+                <button className="main-button" style={{backgroundColor:'#36B3CE',marginLeft:'10px'}}>Edit</button>
+                </div>
             </div>
         </div>
     );

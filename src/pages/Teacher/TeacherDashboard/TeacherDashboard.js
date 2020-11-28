@@ -12,7 +12,7 @@ const TeacherDashboard = () => {
 
     console.log(runningExam);
     return (
-        <div style={{width:'1000px',marginTop:'40px'}}>
+        <div style={{width:'1125px',marginTop:'40px'}}>
                 <div className="dashboard-next-exam d-flex justify-content-between">
                     <div>
                         <h6>{runningExam.status} Now</h6>

@@ -32,11 +32,13 @@ const SignIn = () => {
 
     return (
         <div>
-            <h1>Sign In</h1>
+            <h1 className="font-color">Sign In</h1>
             <br/>
-            <p>Sign In As</p>
-            <button className={user.student ? "active" : "without-active"} style={{marginRight:'20px'}} onClick={handleStudent}>Student</button>
-            <button className={user.teacher ? "active" : "without-active"} onClick={handleTeacher}>Teacher</button>
+            <p className="font-color" style={{marginBottom:'2px'}}>Sign In As</p>
+            <div style={{display:'flex'}}>
+                <button className={user.student ? "active" : "without-active"} style={{marginRight:'20px'}} onClick={handleStudent}>Student</button>
+                <button className={user.teacher ? "active" : "without-active"} onClick={handleTeacher}>Teacher</button>
+            </div>
             <br/>
             <br/>
             <br/>

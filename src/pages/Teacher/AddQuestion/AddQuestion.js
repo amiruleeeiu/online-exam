@@ -14,7 +14,7 @@ const AddQuestion = () => {
 
 
     return (
-        <div  style={{width:'1000px'}}>
+        <div  style={{width:'1125px'}}>
             <div className={hide && 'hide'}>
                 <h2>Add Question</h2>
                 <br/>

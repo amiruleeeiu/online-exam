@@ -5,8 +5,8 @@ import StudentResultItem from '../../../components/StudentResultItem/StudentResu
 const StudentResult = () => {
     return (
         <div>
-            <div style={{width:'1000px',margin:'30px 10px 20px 0px'}}>
-                <h4>Results</h4>
+            <div style={{width:'1125px',margin:'30px 10px 20px 0px'}}>
+                <h4 style={{marginBottom:'10px'}}>Results</h4>
                 {
                     fakeResult.map(res=><StudentResultItem key={res.id} result={res}></StudentResultItem>)
                 }

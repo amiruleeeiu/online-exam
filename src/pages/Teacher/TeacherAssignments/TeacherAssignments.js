@@ -18,7 +18,7 @@ const TeacherAssignments = () => {
 
 
     return (
-        <div style={{width:'1000px',marginTop:'40px'}}>
+        <div style={{width:'1125px',marginTop:'40px'}}>
             <div className="assignment-create-button">
                 <h1>Assignments</h1>
                 <Link to="/teacher/createassignment"><button className="main-button">Create a new one</button></Link>

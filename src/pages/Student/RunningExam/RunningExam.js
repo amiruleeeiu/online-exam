@@ -20,7 +20,7 @@ const RunningExam = () => {
                 </div>
                 
             </div>
-            <div style={{width:'1000px',margin:'5% 20% 5% 15%'}}>
+            <div style={{width:'1125px',margin:'5% 20% 5% 15%'}}>
                 <div className="d-flex justify-content-between">
                     <h3>{runningExam.title}</h3>
                     <h2 style={{color:'#F74D4D'}}>20:33</h2>
@@ -30,16 +30,16 @@ const RunningExam = () => {
                     <div>
                         <p>1. {runningExam.questions[0].title}</p>
                     <div>
-                        <input type="radio" name="option A"/>
+                        <input style={{width:'30px'}} type="radio" name="option A"/>
                         <label style={{marginLeft:'10px'}}>{runningExam.questions[0].option[0]}</label>
                         <br/>
-                        <input type="radio" name="option B"/>
+                        <input style={{width:'30px'}} type="radio" name="option B"/>
                         <label style={{marginLeft:'10px'}}>{runningExam.questions[0].option[1]}</label>
                         <br/>
-                        <input type="radio" name="option C"/>
+                        <input style={{width:'30px'}} type="radio" name="option C"/>
                         <label style={{marginLeft:'10px'}}>{runningExam.questions[0].option[2]}</label>
                         <br/>
-                        <input type="radio" name="option D"/>
+                        <input style={{width:'30px'}} type="radio" name="option D"/>
                         <label style={{marginLeft:'10px'}}>{runningExam.questions[0].option[3]}</label>
                     </div>
                     <br/>
@@ -47,10 +47,10 @@ const RunningExam = () => {
                     <input style={{width:'400px'}} type="range" name="vol" min="0" max="400"></input>
                     <br/>
                     <p>3. {runningExam.questions[2].title}</p>
-                    <textarea type="text" rows="6" cols="40" style={{width:'800px'}} className="form-control"></textarea>
+                    <textarea type="text" rows="6" cols="40" style={{width:'1000px'}} ></textarea>
                     <br/>
                     <p>4. {runningExam.questions[3].title}</p>
-                    <textarea type="text" rows="6" cols="40" style={{width:'800px'}} className="form-control"></textarea>
+                    <textarea type="text" rows="6" cols="40" style={{width:'1000px'}} ></textarea>
                     </div>
                     <br/>
                     <div style={{marginLeft:'320px'}}>

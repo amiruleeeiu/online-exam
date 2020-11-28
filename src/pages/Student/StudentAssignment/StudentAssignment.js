@@ -17,7 +17,7 @@ const StudentAssignment = () => {
     
     return (
         <div>
-            <div style={{margin:'30px 10px 20px 0px',width:'1000px'}}>
+            <div style={{margin:'30px 10px 20px 0px',width:'1125px'}}>
                 <h3>Assignments</h3>
                 <div style={{marginTop:'20px'}} className="selection-button">
                 <div style={{display:'flex'}}>

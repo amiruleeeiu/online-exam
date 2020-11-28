@@ -1,25 +1,24 @@
 .home{
-    display: flex;
     background-image: url('../../../src//images//loginBackground.svg');
     background-repeat: no-repeat;
-    width: 100%;
+    background-size: 70%;
+    width: 1500px;
+    height: 865px;
+    
 }
 .app-title{
-    width: 50%;
-    height: 665px;
-    margin-left: 80px;
-   
+    margin-top: 20%;
 }
 .app-title h4{
-    padding-top: 30%;
     color: white;
-    font-size: 30px;
+    font-size: 40px;
+    margin-left: 100px;
 }
 .app-title h1{
     color: white;
     font-size: 60px;
+    margin-left: 100px;
 }
 .auth{
-    margin-top: 10%;
-    margin-left: 150px;
+    margin-top: 200px;
 }

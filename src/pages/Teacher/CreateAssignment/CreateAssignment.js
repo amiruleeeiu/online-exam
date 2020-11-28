@@ -13,11 +13,11 @@ const CreateAssignment = () => {
                 <form>
                     <div className="form-group">
                         <label>Title</label>
-                        <input type="title" className="form-control" placeholder="Assignment Title"/>
+                        <input type="title" placeholder="Assignment Title"/>
                     </div>
                     <div className="form-group">
                         <label >Instructions of Students</label>
-                        <textarea rows="5" className="form-control"></textarea>
+                        <textarea rows="5"></textarea>
                     </div>
                     <div>
                         <label>Date & Time</label>
@@ -35,21 +35,21 @@ const CreateAssignment = () => {
                     <div >
                         <label>Select Audiance</label>
                         <div className="form-inline">
-                            <select  className="form-control" name="cars" style={{width:'200px'}}>
+                            <select   name="cars" style={{width:'220px'}}>
                                 <option value="Department">Department</option>
                                 <option value="EEE">EEE</option>
                                 <option value="CSE">CSE</option>
                                 <option value="IPE">IPE</option>
                                 <option value="ChE">ChE</option>
                             </select>
-                            <select  className="form-control" name="cars" style={{marginLeft:'20px',width:'200px'}}>
+                            <select  name="cars" style={{marginLeft:'20px',width:'220px'}}>
                                 <option value="Semister">Semister</option>
                                 <option value="1st">1st</option>
                                 <option value="2nd">2nd</option>
                                 <option value="3rd">3rd</option>
                                 <option value="4nd">4nd</option>
                             </select>
-                            <select  className="form-control" name="cars" style={{marginLeft:'20px',width:'200px'}}>
+                            <select  name="cars" style={{marginLeft:'20px',width:'220px'}}>
                                 <option value="Course">Course</option>
                                 <option value="CSE-1001">CSE-1001</option>
                                 <option value="CSE-1002">CSE-1002</option>
